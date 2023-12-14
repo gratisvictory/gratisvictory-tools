@@ -7,8 +7,6 @@
     "prettier",
     "eslint",
     "tsconfig",
-    "builder",
-    "jest",
     "stylelint"
   ],
   "scripts": {
