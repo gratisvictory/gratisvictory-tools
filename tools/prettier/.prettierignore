@@ -20,4 +20,3 @@ coverage
 *.html
 *.md
 .*ignore
-package.json

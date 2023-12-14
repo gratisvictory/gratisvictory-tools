@@ -8,6 +8,9 @@
     ".prettierrc.js",
     ".prettierignore"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json}\""
   },

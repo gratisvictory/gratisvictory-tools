@@ -20,6 +20,7 @@
   "devDependencies": {
     "@gratisvictory/prettier": "workspace:*",
     "@gratisvictory/tsconfig": "workspace:*",
+    "@gratisvictory/eslint": "workspace:*",
     "prettier": "3.1.1",
     "turbo": "1.11.2"
   },
