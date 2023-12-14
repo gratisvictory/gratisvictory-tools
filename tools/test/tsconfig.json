@@ -1,6 +1,0 @@
-  {
-    "extends": "@gratisvictory/tsconfig/tsconfig.next.json",
-    "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
-  }
-
