@@ -15,12 +15,16 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "turbo run format"
+    "format": "turbo run format",
+    "lint-staged": "turbo run lint-staged",
+    "preinstall": "husky install"
   },
   "devDependencies": {
+    "@gratisvictory/eslint": "workspace:*",
     "@gratisvictory/prettier": "workspace:*",
     "@gratisvictory/tsconfig": "workspace:*",
-    "@gratisvictory/eslint": "workspace:*",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
     "prettier": "3.1.1",
     "turbo": "1.11.2"
   },
