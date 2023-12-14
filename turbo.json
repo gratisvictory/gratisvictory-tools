@@ -10,9 +10,6 @@
     "stylelint": {},
     "format": {},
     "lint": {},
-    "deploy": {
-      "dependsOn": ["build", "format", "stylelint", "lint", "prettier"]
-    },
     "dev": {
       "cache": false,
       "persistent": true

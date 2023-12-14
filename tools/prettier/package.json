@@ -1,19 +1,20 @@
 {
   "name": "@gratisvictory/prettier",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
   "main": "index.js",
+  "description": "prettier-config",
+  "prettier": "./.prettierrc.js",
   "files": [
-    ".prettierrc.js"
+    ".prettierrc.js",
+    ".prettierignore"
   ],
   "scripts": {
-    "format": "prettier --write \"**/*.{js,ts,tsx,json}\""
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json}\""
   },
-  "lint-staged": {
-    "*.js": "prettier --write"
-  },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "prettier"
+  ],
+  "author": "gratisvictory",
   "license": "MIT",
   "peerDependencies": {
     "prettier": "^3.0.3",
