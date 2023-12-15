@@ -12,7 +12,7 @@ pnpm add -D @gratisvictory/stylelint
 ```
 # configuration file
 ```js
-// .stylelint.cjs
+// .stylelintrc.cjs
 const { stylelint } = require('@gratisvictory/stylelint')
 
 module.exports = stylelint
