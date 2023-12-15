@@ -36,14 +36,6 @@ jobs:
         run: pnpm config set store-dir $PNPM_CACHE_FOLDER
       - name: install dependencies
         run: pnpm install
-      # - name: create and publish versions
-      #   uses: changesets/action@v1
-      #   with:
-      #     version: pnpm ci:version
-      #     publish: pnpm ci:publish
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
-      #     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: create and publish versions
         run: pnpm ci:publish
         env:
