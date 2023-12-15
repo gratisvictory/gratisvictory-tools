@@ -11,6 +11,7 @@
     "moduleDetection": "force",
     "noUncheckedIndexedAccess": true,
     "resolveJsonModule": true,
+    "moduleResolution": "Node",
     "allowJs": true,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
