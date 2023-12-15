@@ -6,26 +6,19 @@ on:
       - main
 
 jobs:
-  lint:
+  lint_format:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
         uses: actions/checkout@v4.1.1
       - name: Install dependencies
         run: pnpm install
-      - name: lint
-        run: pnpm run lint-staged
-  format:
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout
-        uses: actions/checkout@v4.1.1
-      - name: Install dependencies
-        run: pnpm install
-      - name: format
-        run: pnpm run format
+      - name: Lint and Format
+        run: |
+          npm run lint-staged
+          npm run format
   publish-npm:
-    needs: [lint, format]
+    needs: [lint_format]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4.1.1
