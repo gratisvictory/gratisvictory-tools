@@ -31,4 +31,4 @@ jobs:
           version: pnpm ci:version
           publish: pnpm ci:publish
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_KEY }}
+          GITHUB_TOKEN: ${{ secrets.DEPLOY_KEY }}
