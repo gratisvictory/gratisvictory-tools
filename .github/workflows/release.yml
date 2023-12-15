@@ -17,6 +17,6 @@ jobs:
       - name: Changesets
         uses: changesets/action@master
         with:
-          publish: npx changeset publish
+          publish: npm run publish-packages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
