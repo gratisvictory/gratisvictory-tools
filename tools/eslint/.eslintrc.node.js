@@ -28,20 +28,6 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'import/no-extraneous-dependencies': 'off',
     'simple-import-sort/exports': 'error',
-    'simple-import-sort/imports': [
-      'error',
-      {
-        groups: [
-          ['^react', '^@?\\w'],
-          ['^@(@gratisvictory/tools/.*|$)'],
-          ['^@(([\\/.]?\\w)|assets|test-utils)'],
-          ['^\\u0000'],
-          ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
-          ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
-          ['^.+\\.s?css$'],
-        ],
-      },
-    ],
     'require-await': 'error',
   },
   overrides: [
