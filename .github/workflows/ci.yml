@@ -11,6 +11,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.1.1
       - name: Install
-        run: pnpm i
+        run: yarn
       - name: Lint
-        run: pnpm lint-staged
+        run: yarn lint-staged
