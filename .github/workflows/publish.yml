@@ -1,0 +1,36 @@
+name: NPM Publish
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4.1.1
+      - name: Install dependencies
+        run: pnpm install
+      - name: lint
+        run: pnpm run lint-staged
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4.1.1
+      - name: Install dependencies
+        run: pnpm install
+      - name: format
+        run: pnpm run format
+  publish-npm:
+    needs: [lint, format]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4.1.1
+      - uses: JS-DevTools/npm-publish@v3.0.1
+        with:
+          registry: https://registry.npmjs.org/
+          token: ${{ secrets.NPM_TOKEN }}
+          access: public
