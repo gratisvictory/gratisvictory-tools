@@ -15,8 +15,7 @@
     "lint": "turbo run lint",
     "format": "turbo run format",
     "lint-staged": "turbo run lint-staged",
-    "preinstall": "husky install",
-    "publish-packages": "turbo run changeset publish"
+    "preinstall": "husky install"
   },
   "devDependencies": {
     "husky": "^8.0.3",
