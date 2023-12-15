@@ -1,0 +1,49 @@
+name: NPM Publish
+
+on:
+  push:
+    branches:
+      - main
+
+# jobs:
+#   lint_format:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: checkout
+#         uses: actions/checkout@v4.1.1
+#       - name: Install dependencies
+#         run: npm install
+#       - name: Lint and Format
+#         run: |
+#           npm run lint-staged
+#           npm run format
+#   publish-npm:
+#     needs: [lint_format]
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v2
+#         with:
+#           fetch-depth: 0
+#       - name: Changeset
+#         uses: generates/changeset-action@v3.0.0
+#       - name: Commit Changes
+#         uses: generates/commit-action@v1.0.1
+#         with:
+#           token: ${{ secrets.NPM_TOKEN }}
+jobs:
+  changeset:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Add Changeset
+        uses: ./
+      - name: Commit Changes
+        uses: generates/changeset-action@v3.0.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}

@@ -15,7 +15,8 @@
     "lint": "turbo run lint",
     "format": "turbo run format",
     "lint-staged": "turbo run lint-staged",
-    "preinstall": "husky install"
+    "preinstall": "husky install",
+    "publish-packages": "turbo run build lint-staged format && changeset version && changeset publish"
   },
   "devDependencies": {
     "@gratisvictory/eslint": "workspace:*",
@@ -29,5 +30,8 @@
   "packageManager": "pnpm@8.9.0",
   "engines": {
     "node": ">=18"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.27.1"
   }
 }
