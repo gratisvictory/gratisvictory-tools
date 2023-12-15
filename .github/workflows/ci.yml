@@ -11,6 +11,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.1.1
       - name: Install
-        run: yarn
+        run: npm install
       - name: Lint
-        run: yarn lint-staged
+        run: npm run lint-staged
