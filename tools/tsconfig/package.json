@@ -1,6 +1,6 @@
 {
   "name": "@gratisvictory/tsconfig",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "tsconfig",
   "publishConfig": {
     "access": "public"
@@ -9,11 +9,12 @@
     "tsconfig.react.json",
     "tsconfig.next.json"
   ],
-  "keywords": [],
+  "keywords": [
+    "tsconfig"
+  ],
   "author": "gratisvictory",
   "license": "MIT",
   "dependencies": {
-    "prettier": "3.1.1",
     "typescript": "5.3.3"
   },
   "peerDependencies": {
