@@ -15,7 +15,7 @@
     "lint": "turbo run lint",
     "format": "turbo run format",
     "lint-staged": "turbo run lint-staged",
-    "ci:publish": "pnpm publish -r",
+    "ci:publish": "pnpm publish -r --no-git-checks",
     "preinstall": "husky install"
   },
   "devDependencies": {
